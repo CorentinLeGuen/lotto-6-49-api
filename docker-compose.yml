@@ -1,0 +1,7 @@
+version: '3'
+services:
+  6-49-api:
+    container_name: 6-49-api
+    build: ./
+    ports:
+      - '50001:5001'

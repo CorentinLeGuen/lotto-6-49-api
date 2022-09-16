@@ -1,0 +1,592 @@
+{
+	"info": {
+		"_postman_id": "565670f6-c3ff-4cab-9b78-e10885e79bdc",
+		"name": "Lotto 6.49 api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get date",
+			"item": [
+				{
+					"name": "get full not found",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"check status\", function() {\r",
+									"    pm.response.to.be.error;\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:50001/date?full=2022-08-09",
+							"host": [
+								"localhost"
+							],
+							"port": "50001",
+							"path": [
+								"date"
+							],
+							"query": [
+								{
+									"key": "full",
+									"value": "2022-08-09"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get full found",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"check status\", function() {\r",
+									"    pm.response.to.not.be.error;\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"check content\", function() {\r",
+									"    pm.expect(pm.response.text()).to.include(\"draw_date\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"number_1\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"number_2\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"number_3\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"number_4\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"number_5\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"number_6\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"number_c\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:50001/date?full=2022-08-10",
+							"host": [
+								"localhost"
+							],
+							"port": "50001",
+							"path": [
+								"date"
+							],
+							"query": [
+								{
+									"key": "full",
+									"value": "2022-08-10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get starting 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"check status\", function() {\r",
+									"    pm.response.to.not.be.error;\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"check content\", function() {\r",
+									"    pm.expect(pm.response.json()).to.be.an('array');\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:50001/date?starting=2",
+							"host": [
+								"localhost"
+							],
+							"port": "50001",
+							"path": [
+								"date"
+							],
+							"query": [
+								{
+									"key": "starting",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get starting 2020",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"check status\", function() {\r",
+									"    pm.response.to.not.be.error;\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"check content\", function() {\r",
+									"    pm.expect(pm.response.json()).to.be.an('array');\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:50001/date?starting=2",
+							"host": [
+								"localhost"
+							],
+							"port": "50001",
+							"path": [
+								"date"
+							],
+							"query": [
+								{
+									"key": "starting",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get starting 2022-08",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"check status\", function() {\r",
+									"    pm.response.to.not.be.error;\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"check content\", function() {\r",
+									"    pm.expect(pm.response.json()).to.be.an('array');\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:50001/date?starting=2022-08",
+							"host": [
+								"localhost"
+							],
+							"port": "50001",
+							"path": [
+								"date"
+							],
+							"query": [
+								{
+									"key": "starting",
+									"value": "2022-08"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get starting not found",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"check status\", function() {\r",
+									"    pm.response.to.be.error;\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:50001/date?starting=20-22-08",
+							"host": [
+								"localhost"
+							],
+							"port": "50001",
+							"path": [
+								"date"
+							],
+							"query": [
+								{
+									"key": "starting",
+									"value": "20-22-08"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "get number",
+			"item": [
+				{
+					"name": "get number found",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"check status\", function() {\r",
+									"    pm.response.to.not.be.error;\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"check content\", function() {\r",
+									"    pm.expect(pm.response.json()).to.be.an('array');\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:50001/number?all=1",
+							"host": [
+								"localhost"
+							],
+							"port": "50001",
+							"path": [
+								"number"
+							],
+							"query": [
+								{
+									"key": "all",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get number not found",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"check status\", function() {\r",
+									"    pm.response.to.be.error;\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:50001/number?all=0",
+							"host": [
+								"localhost"
+							],
+							"port": "50001",
+							"path": [
+								"number"
+							],
+							"query": [
+								{
+									"key": "all",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get number comp found",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"check status\", function() {\r",
+									"    pm.response.to.not.be.error;\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"check content\", function() {\r",
+									"    pm.expect(pm.response.json()).to.be.an('array');\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:50001/number?comp=1",
+							"host": [
+								"localhost"
+							],
+							"port": "50001",
+							"path": [
+								"number"
+							],
+							"query": [
+								{
+									"key": "comp",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get number comp not found",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"check status\", function() {\r",
+									"    pm.response.to.be.error;\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:50001/number?comp=0",
+							"host": [
+								"localhost"
+							],
+							"port": "50001",
+							"path": [
+								"number"
+							],
+							"query": [
+								{
+									"key": "comp",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "get all",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"check status\", function() {\r",
+							"    pm.response.to.not.be.error;\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"check content\", function() {\r",
+							"    pm.expect(pm.response.json()).to.be.an('array');\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:50001/",
+					"host": [
+						"localhost"
+					],
+					"port": "50001",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get total",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"check status\", function() {\r",
+							"    pm.response.to.not.be.error;\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"check content\", function() {\r",
+							"    pm.expect(pm.response.text()).to.include(\"total\");\r",
+							"    pm.expect(pm.response.json().total).to.eql(4032);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:50001/total",
+					"host": [
+						"localhost"
+					],
+					"port": "50001",
+					"path": [
+						"total"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get stats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"check status\", function() {\r",
+							"    pm.response.to.not.be.error;\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"check content\", function() {\r",
+							"    pm.expect(pm.response.text()).to.include(\"date_last\");\r",
+							"    pm.expect(pm.response.text()).to.include(\"date_start\");\r",
+							"    pm.expect(pm.response.text()).to.include(\"total\");\r",
+							"    pm.expect(pm.response.json().total).to.eql(4032);\r",
+							"    pm.expect(pm.response.text()).to.include(\"stats\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:50001/stats",
+					"host": [
+						"localhost"
+					],
+					"port": "50001",
+					"path": [
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "not found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"check status\", function() {\r",
+							"    pm.response.to.be.error;\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:50001/test",
+					"host": [
+						"localhost"
+					],
+					"port": "50001",
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
