@@ -28,7 +28,7 @@ class LottoDB:
                             OR number_4 == (?) 
                             OR number_5 == (?) 
                             OR number_6 == (?) 
-                            OR number_c == (?) ORDER BY draw_date DESC
+                            OR number_complementary == (?) ORDER BY draw_date DESC
                         """, (n, n, n, n, n, n, n))
         l = cur.fetchall()
         result = []
@@ -41,7 +41,7 @@ class LottoDB:
 
     def get_by_complementary_number(self, n: int) -> list:
         cur = self.con.cursor()
-        cur.execute("""SELECT * FROM draw WHERE number_c == ? ORDER BY draw_date DESC""", (n,))
+        cur.execute("""SELECT * FROM draw WHERE number_complementary == ? ORDER BY draw_date DESC""", (n,))
         l = cur.fetchall()
         result = []
         for d in l:

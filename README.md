@@ -1,12 +1,10 @@
 # Lotto 6.49 API
 
-Lotto 6.49 API is an **unofficial** API containing Lotto records between 1982-06-12 and 2022-09-10.
+Lotto 6.49 API is an **unofficial** API containing Lotto records between 1982-06-12 and 2023-01-21.
 
 [![logo](https://gba.lotoquebec.com/generateurbannieres/docroot/detailles/lotto-6-49/2016-01-22/images/logo-212.png)](https://loteries.lotoquebec.com/fr/loteries/lotto-6-49)
 
-:warning: _Last draw is 2022-09-10 due to maintenance, more info [here](https://societe.lotoquebec.com/fr/medias-et-partenaires/communiques-de-presse/2022/septembre/interruption-lotto-6-49-2022-09-07)._
-
-The CSV database is available [here at CSV](db.csv) and [here at SQLite DB](db.sqlite3).
+The [database SQLite3 is available here](db.sqlite3).
 
 ## How to run
 
